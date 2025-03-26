@@ -41,7 +41,7 @@ const sendEmailNotification = (e) => {
 }
 
 const sendEmail = async (email, name) => {
-    const res = fetch("https://auralynk-api.fstropii.com", {
+    const res = fetch("https://auralynk-api.fstropii.com/email/welcome", {
         method: "POST",
         body: JSON.stringify({
             email,
