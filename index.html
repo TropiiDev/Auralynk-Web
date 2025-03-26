@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Auralynk</title>
+    <link rel="stylesheet" href="/assets/css/styles.css" />
+  </head>
+  <body>
+    
+    <section class="tooltip" style="display: none;">
+      <span class="tooltip-text"></span>
+    </section>
+
+    <section class="hero">
+      <div class="hero_container">
+        <h1 class="hero_heading">
+          <span class="highlight-purple">Welcome to Auralynk</span>
+        </h1>
+
+        <p class="hero_subtext">
+          This website is currently under construction. Please check back later.
+        </p>
+        
+        <p id="email_message">Want to get email notifcations when it's live? Click <button class="email_btn" onClick="openEmailModal()">here!</button></p>
+      </div>
+    </section>
+
+    <section class="email_modal" id="email_modal">
+      <div class="email_modal__container">
+        <div class="email_modal__title">
+          <h2>Stay Tuned</h2>
+        </div>
+        <div class="email_modal__content">
+          <p id="modal_message"></p>
+          <form>
+            <div class="email_modal__input">
+              <label for="name_input">Name</label>
+              <input type="email" id="name_input" placeholder="Enter your name" required>
+              <label for="email_input">Email</label>
+              <input type="email" id="email_input" placeholder="Enter your email" required>
+            </div>
+            <div class="email_modal__button">
+              <button class="submit_form_btn" type="submit">Subscribe</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <script src="/assets/javascript/index.js"></script>
+  </body>
+</html>

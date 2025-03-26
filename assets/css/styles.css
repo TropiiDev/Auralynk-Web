@@ -1,0 +1,104 @@
+/* Importing sleek font */
+@font-face {
+    font-family: "Modista";
+    src: url('../fonts/ModistaProMedium-E4YG9.otf');
+}
+@font-face {
+    font-family: "Modista Italic";
+    src: url('../fonts/ModistaProMediumItalic-OGPOd.otf');
+}
+@font-face {
+    font-family: 'Montilge';
+    src: url('../fonts/MontilgedemoRegular-4nMZ4.otf');
+}
+@font-face {
+    font-family: 'Spring Rainstorm';
+    src: url('../fonts/SpringRainstorm-R9eAV.ttf');
+}
+
+:root {
+    --cool-white: #F0EDEE;
+    --night: #0A090C;
+    --tropical-indigo: #7D80DA;
+    --ultra-violet: #5D5D81;
+    --robin-egg-blue: #4ECDC4;
+}
+
+/* Reset & global styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Modista', sans-serif;
+    background-color: var(--night);
+    color: var(--cool-white);
+}
+/* Main Hero Page */
+.hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--tropical-indigo);
+    height: 100vh;
+}
+
+.email_btn {
+    padding: 5px 10px;
+    background-color: var(--ultra-violet);
+    border: none;
+    border-radius: 5px;
+    color: var(--tropical-indigo);
+    transition: 0.5s;
+}
+
+.email_btn:hover {
+    background-color: var(--robin-egg-blue);
+}
+
+/* Email Modal */
+.email_modal {
+    display: none;
+    color: var(--night);
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    height: 100vh;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.email_modal__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    height: 50%;
+    background-color: var(--cool-white);
+}
+
+.submit_form_btn {
+    padding: 5px 10px;
+    background-color: var(--ultra-violet);
+    border: none;
+    border-radius: 5px;
+    color: var(--cool-white);
+    transition: 0.5s;
+}
+
+.email_modal__button {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.email_modal__input input {
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: 1px solid var(--night);
+}
+
+.submit_form_btn:hover {
+    background-color: var(--robin-egg-blue); 
+}
