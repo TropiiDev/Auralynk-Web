@@ -23,17 +23,17 @@ const sendEmailNotification = (e) => {
     console.log('Sending email notification...')
     modalMessage.innerHTML = "Sending message..";
 
-    setTimeout(() => {
-        const email = emailInput.value;
-        const name = document.querySelector('#name_input').value;
-        isEmailSent = sendEmail(email, name);
-        if (isEmailSent.status === 200) {
+    const emailValue = emailInput.value;
+    const name = document.querySelector('#name_input').value;
+    isEmailSent = sendEmail(emailValue, name);
+    isEmailSent.then(res => {
+        if (res.message == "Email sent") {
             modal.style.display = 'none';
             hero.style.display = 'flex';
         } else {
             modalMessage.innerHTML = "Something went wrong, please try again later";
         }
-    }, 5000)
+    });
 
     console.log('Sent email notification')
     emailMessage.innerHTML = 'Email notification sent!';
@@ -41,18 +41,16 @@ const sendEmailNotification = (e) => {
 }
 
 const sendEmail = async (email, name) => {
-    const res = fetch("https://auralynk-api.fstropii.com/email/welcome", {
+    return fetch("https://auralynk-api.fstropii.com/email/welcome", {
         method: "POST",
         body: JSON.stringify({
-            email,
-            name
+            email: email,
+            name: name
         }),
         headers: {
             "Content-Type": "application/json"
         }
-    });
-
-    return res;
+    }).then(res => res.json())
 }
 
 closeEmailModalBtn.addEventListener('click', (e) => sendEmailNotification(e));
