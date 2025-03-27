@@ -31,7 +31,7 @@ const sendEmailNotification = (e) => {
             modal.style.display = 'none';
             hero.style.display = 'flex';
         } else if (res.detail == "Email already registered") {
-            modalMessage.innerHTML = "Email already registered";
+            modalMessage.innerHTML = "Oops! Looks like someone already used that email. Try again.";
         } else {
             modalMessage.innerHTML = "Something went wrong, please try again later";
         }
