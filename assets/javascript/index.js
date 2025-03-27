@@ -30,6 +30,8 @@ const sendEmailNotification = (e) => {
         if (res.message == "Email sent") {
             modal.style.display = 'none';
             hero.style.display = 'flex';
+        } else if (res.detail == "Email already registered") {
+            modalMessage.innerHTML = "Email already registered";
         } else {
             modalMessage.innerHTML = "Something went wrong, please try again later";
         }
